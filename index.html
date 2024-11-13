@@ -53,7 +53,9 @@
           <div class="hero-content">
             <p>Косметологічна клініка</p>
             <h1 class="hero-title" lang="en">beauty zone</h1>
-            <button class="hero-btn" type="submit">Замовити дзвінок</button>
+            <button class="hero-btn modal-btn-open" type="button">
+              Замовити дзвінок
+            </button>
             <p class="hero-text">
               Запишись та отримай безкоштовну консультацію нашого косметолога
             </p>
@@ -249,27 +251,29 @@
                   >Україна, м. Київ, вул. Тараса Шевченка 5</a
                 >
               </li>
-              <li>
-                <a href="tel:+380960000007" target="_blank">
-                  <svg class="address-icon" width="42" height="42">
-                    <use href="./img/icons.svg#icon-telephone"></use>
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a href="https://www.facebook.com/" target="_blank">
-                  <svg class="address-icon" width="42" height="42">
-                    <use href="./img/icons.svg#icon-facebook"></use>
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a href="https://www.instagram.com/" target="_blank">
-                  <svg class="address-icon" width="42" height="42">
-                    <use href="./img/icons.svg#icon-instagram"></use>
-                  </svg>
-                </a>
-              </li>
+              <div class="address-social-item">
+                <li>
+                  <a href="tel:+380960000007" target="_blank">
+                    <svg class="address-icon" width="42" height="42">
+                      <use href="./img/icons.svg#icon-telephone"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com/" target="_blank">
+                    <svg class="address-icon" width="42" height="42">
+                      <use href="./img/icons.svg#icon-facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com/" target="_blank">
+                    <svg class="address-icon" width="42" height="42">
+                      <use href="./img/icons.svg#icon-instagram"></use>
+                    </svg>
+                  </a>
+                </li>
+              </div>
             </ul>
             <div class="address-info">
               <a class="address-link" href="#" target="_blank"
@@ -281,5 +285,13 @@
         </div>
       </div>
     </footer>
+
+    <div class="backdrop">
+      <div class="modal">
+        <button class="modal-btn-close" type="button">Close</button>
+      </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>

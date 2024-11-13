@@ -135,7 +135,6 @@ address {
 .hero-content {
   display: flex;
   flex-direction: column;
-  max-width: 530px;
   margin-left: 100px;
 }
 
@@ -359,12 +358,25 @@ address {
 
 /* Footer */
 .footer {
+  position: relative;
   background-color: var(--color-brand-dark);
   background-image: url("../img/footer-background.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   padding: 56px 0;
+}
+
+.footer::after {
+  position: absolute;
+  width: 250px;
+  height: 155px;
+  background-size: 100%;
+  bottom: 0;
+  right: 0;
+  background-repeat: no-repeat;
+  background-image: url(../img/decor-footer.png);
+  content: "";
 }
 
 .footer-container {
@@ -382,11 +394,22 @@ address {
 .footer-logo,
 .footer-menu {
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .address-list,
 .address-info {
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.address-social-item {
+  display: flex;
+  gap: 24px;
 }
 
 .address-link {
@@ -401,4 +424,37 @@ address {
 .address-copyright {
   font-size: 13px;
   color: var(--color-grey);
+}
+
+/*! Modal */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(1, 31, 74, 0.4);
+}
+
+.modal {
+  position: relative;
+  width: 720px;
+  height: 680px;
+  border-radius: 48px;
+  background-color: var(--color-brand-dark);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal-btn-close {
+  position: absolute;
+  top: 42px;
+  right: 42px;
 }
