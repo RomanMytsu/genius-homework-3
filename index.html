@@ -82,21 +82,46 @@
               </p>
             </div>
             <div class="about-us-img">
-              <img
-                class="about-us-photo"
-                src="./img/beauty_face-before.jpg"
-                alt=""
-              />
-              <img
-                class="about-us-photo second-photo"
-                src="./img/beauty_face-after.jpg"
-                alt=""
-              />
+              <ul>
+                <li>
+                  <img
+                    width="327"
+                    height="327"
+                    class="about-us-photo"
+                    src="./img/beauty_face-before.jpg"
+                    alt=""
+                  />
+                </li>
+                <li>
+                  <svg class="middle-star-icon" width="40" height="40">
+                    <use href="./img/icons.svg#icon-middle-star-icon"></use>
+                  </svg>
+                </li>
+                <li>
+                  <svg class="small-star-icon" width="16" height="16">
+                    <use href="./img/icons.svg#icon-small-star-icon"></use>
+                  </svg>
+                </li>
+                <li>
+                  <svg class="big-star-icon" width="64" height="64">
+                    <use href="./img/icons.svg#icon-big-star-icon"></use>
+                  </svg>
+                </li>
+                <li>
+                  <img
+                    width="327"
+                    height="327"
+                    class="about-us-photo second-photo"
+                    src="./img/beauty_face-after.jpg"
+                    alt=""
+                  />
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </section>
-      <section class="section" id="advantages">
+      <section class="section advantages" id="advantages">
         <div class="container">
           <h2 class="section-title">
             Чому люди <br />
@@ -153,17 +178,41 @@
             <ul class="procedures-list">
               <li class="procedures-item">
                 <article class="procedures-card">
-                  <p class="our-procedures-text">Маски для обличчя</p>
+                  <img
+                    class="procedures-img"
+                    src="./img/face-masks.png"
+                    alt=""
+                  />
+                  <p class="our-procedures-text">
+                    Маски <br />
+                    для обличчя
+                  </p>
                 </article>
               </li>
               <li class="procedures-item">
                 <article class="procedures-card">
-                  <p class="our-procedures-text">Ін'єкції для обличчя</p>
+                  <img
+                    class="procedures-img"
+                    src="./img/facial-injections.png"
+                    alt=""
+                  />
+                  <p class="our-procedures-text">
+                    Ін'єкції <br />
+                    для обличчя
+                  </p>
                 </article>
               </li>
               <li class="procedures-item">
                 <article class="procedures-card">
-                  <p class="our-procedures-text">Очищення обличчя</p>
+                  <img
+                    class="procedures-img"
+                    src="./img/facial-cleansing.png"
+                    alt=""
+                  />
+                  <p class="our-procedures-text">
+                    Очищення <br />
+                    обличчя
+                  </p>
                 </article>
               </li>
             </ul>
@@ -192,19 +241,62 @@
               referrerpolicy="no-referrer-when-downgrade"
             ></iframe>
             <div class="contacts-form">
-              <p class="form-text">
+              <p class="modal-text">
                 Запишіться <span class="accent">безкоштовно</span> та отримайте
                 подарунок
               </p>
-              <button class="hero-btn" type="submit">
-                Записатись безкоштовно
-              </button>
-              <a class="form-confidentiality" href="#"
-                >Натискаючи на кнопку я погоджуюсь
-                <span class="form-confidentiality-accent"
-                  >з політикою конфіденційності</span
-                ></a
-              >
+              <form name="contacts-form" autocomplete="off">
+                <div class="form-field">
+                  <label class="form-label visually-hidden" for="user-name"
+                    >Ваше ім'я та прізвище</label
+                  >
+                  <input
+                    class="form-input"
+                    type="text"
+                    id="user-name"
+                    name="user-name"
+                    placeholder="Ваше ім'я та прізвище"
+                    required
+                    pattern="^[a-zA-Z]+\s[a-zA-Z]+$"
+                  />
+                </div>
+                <div class="form-field">
+                  <label class="form-label visually-hidden" for="user-tel"
+                    >Ваш номер телефону</label
+                  >
+                  <input
+                    class="form-input"
+                    type="tel"
+                    id="user-tel"
+                    name="user-tel"
+                    placeholder="Ваш номер телефону"
+                    required
+                    pattern="^\+?3?8?(0\d{9})$"
+                  />
+                </div>
+                <div class="form-field">
+                  <label class="form-label visually-hidden" for="user-emil"
+                    >Ваша електронна пошта</label
+                  >
+                  <input
+                    class="form-input"
+                    type="email"
+                    id="user-emil"
+                    name="user-emil"
+                    placeholder="Ваша електронна пошта"
+                    required
+                  />
+                </div>
+                <button class="form-btn" type="submit">
+                  Записатись безкоштовно
+                </button>
+                <p class="form-terms">
+                  Натискаючи на кнопку я погоджуюсь
+                  <a class="form-terms-link" href="#">
+                    з політикою конфіденційності</a
+                  >
+                </p>
+              </form>
             </div>
           </div>
         </div>
@@ -286,10 +378,12 @@
       </div>
     </footer>
 
-    <div class="backdrop">
+    <!-- Modal -->
+
+    <div class="backdrop is-hidden">
       <div class="modal">
         <button class="modal-btn-close" type="button">
-          <svg class="close-icon" width="32" height="32">
+          <svg width="16" height="16">
             <use href="./img/icons.svg#icon-close-modal"></use>
           </svg>
         </button>
@@ -298,7 +392,7 @@
           Запишіться <span class="accent">безкоштовно</span> та отримайте
           подарунок
         </p>
-        <form name="contact-form" autocomplete="off" novalidate>
+        <form name="modal-form" autocomplete="off" novalidate>
           <div class="form-field">
             <label class="form-label visually-hidden" for="user-name"
               >Ваше ім'я та прізвище</label
@@ -309,6 +403,7 @@
               id="user-name"
               name="user-name"
               placeholder="Ваше ім'я та прізвище"
+              required
             />
           </div>
           <div class="form-field">
@@ -321,6 +416,7 @@
               id="user-tel"
               name="user-tel"
               placeholder="Ваш номер телефону"
+              required
             />
           </div>
           <div class="form-field">
@@ -333,6 +429,7 @@
               id="user-emil"
               name="user-emil"
               placeholder="Ваша електронна пошта"
+              required
             />
           </div>
           <button class="form-btn" type="submit">Записатись безкоштовно</button>
