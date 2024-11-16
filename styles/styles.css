@@ -297,9 +297,6 @@ address {
   text-transform: capitalize;
 }
 /*? Advantages */
-.advantages {
-}
-
 .advantages-list {
   display: flex;
   justify-content: center;
